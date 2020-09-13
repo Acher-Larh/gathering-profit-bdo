@@ -44,7 +44,7 @@ def create_register(conn, register):
     
     return cur.lastrowid
 
-def main():
+def run_database_create():
     database = "database.db"
 
     sql_create_materials_table = """ CREATE TABLE IF NOT EXISTS materials (
@@ -71,6 +71,3 @@ def main():
         show_database(conn)
     else: 
         print("Error! Cannot create the database connection.")
-
-if __name__ == "__main__":
-    main()

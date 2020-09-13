@@ -1,4 +1,4 @@
-from database_create import create_register, create_material, create_connection, show_database
+from database_create import create_register, create_material, create_connection, show_database, run_database_create
 from datetime import date
 
 def calculateIncome():
@@ -63,6 +63,7 @@ def getSilverPerHour(totalTaxedSilver, totalTime):
     return 60*int(totalTaxedSilver)/int(totalTime)
 
 def main():
+    run_database_create()
     calculateIncome()
 
 if __name__ == "__main__":
